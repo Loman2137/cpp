@@ -1,7 +1,13 @@
 #include <iostream>
+#include "event.h"
+
+using namespace std;
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    std::cout<<"test";
+
+    Event e1;
+    e1.show();
+
+
     return 0;
 }
