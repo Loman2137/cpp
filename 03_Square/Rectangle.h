@@ -5,10 +5,10 @@
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
 #include <iostream>
-#include "Point.h"
-#include "Rectangle.h"
 
 using namespace std;
+
+class Point;
 
 class Rectangle {
 
@@ -19,7 +19,7 @@ class Rectangle {
     Rectangle(string="name",double=0, double=0, double=1, double=1);
     void load();
 
-    friend void Var(Point pkt, Rectangle rec);
+    friend bool Var(Rectangle rec, Point pkt);
 };
 
 #endif //RECTANGLE_H

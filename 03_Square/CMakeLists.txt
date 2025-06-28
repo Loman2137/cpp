@@ -8,4 +8,5 @@ add_executable(03_Square main.cpp
         Point.cpp
         Rectangle.cpp
         Rectangle.h
+        Var.h
 )
