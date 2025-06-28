@@ -1,3 +1,3 @@
-# cpp_object
+# cpp
 
-In this repo I'm doing some basics of object C++
+In this repo I'm doing some basics C++
