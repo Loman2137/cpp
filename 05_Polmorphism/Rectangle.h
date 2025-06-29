@@ -8,13 +8,11 @@
 
 
 class Rectangle: public Form {
-    double r;
+    float r;
 
     public:
-    Rectangle(double r=1);
+    Rectangle(float r=1);
     virtual float surface();
 };
-
-
 
 #endif //RECTANGLE_H

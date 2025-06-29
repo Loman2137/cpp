@@ -4,10 +4,10 @@
 
 #ifndef SQUARE_H
 #define SQUARE_H
+#include "Form.h"
 
 
-
-class Square {
+class Square : public Form {
     float x;
 
 public:

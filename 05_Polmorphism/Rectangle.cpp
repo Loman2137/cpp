@@ -6,7 +6,7 @@
 
 #include <math.h>
 
-Rectangle::Rectangle(double r) {
+Rectangle::Rectangle(float r) {
     this->r = r;
 }
 
