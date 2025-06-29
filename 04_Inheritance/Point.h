@@ -13,10 +13,8 @@ class Point {
     string name;
 
 public:
-    Point(double x, double y, string name);
+    Point(double x=0, double y=0, string name="P");
     void show();
-
-
 
 };
 

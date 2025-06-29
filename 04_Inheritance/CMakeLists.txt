@@ -5,4 +5,6 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(04_Inheritance main.cpp
         Point.cpp
-        Point.h)
+        Point.h
+        Circle.cpp
+        Circle.h)
