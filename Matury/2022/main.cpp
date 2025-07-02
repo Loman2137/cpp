@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 #include <fstream>
 #include <set>
@@ -16,10 +17,11 @@ int main() {
 
     fstream wczytanie("Dane_2205/przyklad.txt", ios::in); //ios::in jest domyślny
     fstream zapisanie("Dane_2205/wyniki4.txt", ios::out); //ios::out ma domyślnie nadpisywanie wartości
+    fstream zapisanie2("Dane_2205/trojki.txt", ios::out); //ios::out ma domyślnie nadpisywanie wartości
     cout<<"kompilacja"<<endl;
 
     while (wczytanie >> liczba) {
-        //kontener.push_back(liczba);
+        kontener.push_back(liczba);
 
         //4.1
          string h = to_string(liczba);
@@ -51,7 +53,7 @@ int main() {
                 i++;
         }
     }
-
+    sort(kontener.begin(), kontener.end());
 
 
 
