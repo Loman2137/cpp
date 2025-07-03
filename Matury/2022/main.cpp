@@ -114,4 +114,4 @@ int main() {
     zapisanie << "a)" <<  zasobnik3.size()<< endl <<"b)"<< zasobnik5.size();
     wczytanie.close();
     zapisanie.close();
-}
+}//to sie wysłało?
