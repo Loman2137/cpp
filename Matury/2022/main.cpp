@@ -8,12 +8,17 @@ using namespace std;
 
 vector<int> kontener;
 int liczba{};
+set<vector<int>> trojki;
+set<vector<int>> piatki;
+set<vector<int>> zasobnik3;
+set<vector<int>> zasobniek5;
+int z4_1ile{}, z4_1num{};
+int z4_2roz{}, z4_2pop_roz{}, z4_2num{};
+set<int>pierwsze_pop; set<int>pierwsze; int z4_2liczpier;
 
 int main() {
 
-    int z4_1ile{}, z4_1num{};
-    int z4_2roz{}, z4_2pop_roz{}, z4_2num{};
-    set<int>pierwsze_pop; set<int>pierwsze; int z4_2liczpier;
+
 
     fstream wczytanie("Dane_2205/przyklad.txt", ios::in); //ios::in jest domyślny
     fstream zapisanie("Dane_2205/wyniki4.txt", ios::out); //ios::out ma domyślnie nadpisywanie wartości
@@ -55,7 +60,17 @@ int main() {
     }
     sort(kontener.begin(), kontener.end());
 
-
+    for (size_t i = 0; i < kontener.size()-3; i++) {
+        vector<int>tmp;
+        for (size_t j = i; j < kontener.size(); j++) {
+            if (kontener[j]%kontener[i]==0)
+                tmp.push_back(kontener[j]);
+        }
+        if (tmp.size()>=3)
+            trojki.insert(tmp);
+        if (tmp.size()>=5)
+            piatki.insert(tmp);
+    }
 
 
     zapisanie << z4_1ile<<" "<<z4_1num<<endl;
