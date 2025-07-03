@@ -45,7 +45,7 @@ void show5(vector<int>ciag) {
 
 int main() {
 
-    fstream wczytanie("Dane_2205/przyklad.txt", ios::in); //ios::in jest domyślny
+    fstream wczytanie("Dane_2205/liczby.txt", ios::in); //ios::in jest domyślny
     fstream zapisanie("Dane_2205/wyniki4.txt", ios::out); //ios::out ma domyślnie nadpisywanie wartości
     fstream zapisanie2("Dane_2205/trojki.txt", ios::out); //ios::out ma domyślnie nadpisywanie wartości
     cout<<"kompilacja"<<endl;
