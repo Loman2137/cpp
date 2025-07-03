@@ -22,7 +22,7 @@ struct Probe {
 
 int main() {
 
-    generuj_tabele(false)
+    generuj_tabele(false);
 
 
 
