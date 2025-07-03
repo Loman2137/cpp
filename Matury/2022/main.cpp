@@ -11,14 +11,39 @@ int liczba{};
 set<vector<int>> trojki;
 set<vector<int>> piatki;
 set<vector<int>> zasobnik3;
-set<vector<int>> zasobniek5;
+set<vector<int>> zasobnik5;
 int z4_1ile{}, z4_1num{};
 int z4_2roz{}, z4_2pop_roz{}, z4_2num{};
 set<int>pierwsze_pop; set<int>pierwsze; int z4_2liczpier;
 
+void show3(vector<int>ciag) {
+    for (int i = 0; i < ciag.size(); ++i) {
+        for (int j = 0; j < ciag.size(); ++j) {
+            for (int k = 0; k < ciag.size(); ++k) {
+                vector<int>tab{ciag[i],ciag[j],ciag[k]};
+                if (adjacent_find(tab.begin(), tab.end(),greater_equal<>())==tab.end())
+                    zasobnik3.insert(tab);
+            }
+        }
+    }
+}
+void show5(vector<int>ciag) {
+    for (int i = 0; i < ciag.size(); ++i) {
+        for (int j = 0; j < ciag.size(); ++j) {
+            for (int k = 0; k < ciag.size(); ++k) {
+                for (int l = 0; l < ciag.size(); ++l) {
+                    for (int m = 0; m < ciag.size(); ++m) {
+                        vector<int>tab{ciag[i],ciag[j],ciag[k], ciag[l],ciag[m]};
+                        if (adjacent_find(tab.begin(), tab.end(),greater_equal<>())==tab.end())
+                            zasobnik5.insert(tab);
+                    }
+                }
+            }
+        }
+    }
+}
+
 int main() {
-
-
 
     fstream wczytanie("Dane_2205/przyklad.txt", ios::in); //ios::in jest domyślny
     fstream zapisanie("Dane_2205/wyniki4.txt", ios::out); //ios::out ma domyślnie nadpisywanie wartości
@@ -71,10 +96,22 @@ int main() {
         if (tmp.size()>=5)
             piatki.insert(tmp);
     }
+    for (auto& x: trojki) {
+        show3(x);
+    }for (auto& x: piatki) {
+        show5(x);
+    }
+    for (auto x: zasobnik3) {
+        for (auto y: x) {
+            zapisanie2<<y<<" ";
+        }
+        zapisanie2<<"\n";
+    }
 
 
     zapisanie << z4_1ile<<" "<<z4_1num<<endl;
     zapisanie << z4_2num << " " << z4_2pop_roz<<" "<<z4_2liczpier<<" "<< pierwsze_pop.size()<<endl;
+    zapisanie << "a)" <<  zasobnik3.size()<< endl <<"b)"<< zasobnik5.size();
     wczytanie.close();
     zapisanie.close();
 }
