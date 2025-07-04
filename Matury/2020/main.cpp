@@ -78,7 +78,7 @@ int main() {
     generuj_tabele(false);
     cout<<"Zadanie 4.2"<<endl;
     for (auto x: zadanie4_2) {
-
+        cout<<x<<" ";
     }
 
 
